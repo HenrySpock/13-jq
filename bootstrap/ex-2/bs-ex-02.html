@@ -6,128 +6,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="signifyingm.ico" type="image/x-icon" alt="motivique icon">
     <title>Document</title>
-    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="bs-ex-02.css" />
 
     <!-- There are 3 JavaScript files and one CSS files needed for including Bootstrap: -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- There is one link to include Font Awesome, but the Bootstrap link is a prerequisite:  -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
-  
-  <!-- Buttons  -->
-  <button type="button" class="btn btn-primary">Primary</button>
-  <button type="button" class="btn btn-secondary">Secondary</button>
-  <button type="button" class="btn btn-success">Success</button>
-  <button type="button" class="btn btn-danger">Danger</button>
-  <button type="button" class="btn btn-warning">Warning</button>
-  <button type="button" class="btn btn-info">Info</button>
-  <button type="button" class="btn btn-light">Light</button>
-  <button type="button" class="btn btn-dark">Dark</button>
-  <button type="button" class="btn btn-link">Link</button>
-  <button type="button" class="btn btn-link disabled">Disabled Link</button>
-  <button type="button" class="btn btn-info">I am an A Tag</button>
-  <!-- bootstrap inputs need a value class: -->
-  <input type="button" value="Input" class="btn btn-danger">
 
-  <!-- Outline Buttons -->
-  <button type="button" class="btn btn-outline-primary">Primary</button>
-  <button type="button" class="btn btn-outline-primary btn-lg">Primary</button>
-  <button type="button" class="btn btn-outline-primary btn-sm">Primary</button>
-  <button type="button" class="btn btn-outline-primary btn-block">Primary</button>
-
-  <!-- Badges: Can go nearly anywhere  -->
-  <h3>Inbox <span class="badge badge-primary">99</span></h3>
-  <h3>Inbox <span class="badge badge-danger badge-pill">99</span></h3>
-  <button class="btn btn-lg btn-outline-danger">
-    Delete All <span class="badge badge-danger badge-pill">10</span>
-  </button>
-
-   
-
-    <!-- Containers and Alerts -->
-    <!-- Containers are used to wrap around content to give it space and center it. Container class is responsive. -->
-    <div class="alert alert-danger">Watch out!</div>
-    <div class="container"><div class="alert alert-danger">Watch out!</div></div>
-    <!-- Container fluide takes up screen width at all sizes.  -->
-    <div class="container-fluid"><div class="alert alert-info">Watch out!</div></div>
-
-    <!-- Adding role="alert" means the screen reader will read it out.  -->
-    <div class="container-fluid"><div class="alert alert-info" role="alert">Message in inbox! <a href="#">Check it out!</a></div></div> 
-    <div class="container-fluid"><div class="alert alert-info"><h4 class="alert-heading">Hey!</h4> Message in inbox! <a href="#" class="alert-link">Check it out!</a></div></div>
-
-    <!-- Dismissable alert - fade is an unnecessary class, just adds a transition: -->
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-      <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-
-    <!-- Jumbotrons: a div wrapped around some stuff  -->
-    <div class="container">
-      <div class="jumbotron">
-        <h1 class="display-3">Howdy!</h1>
-      </div>
-    </div>
-
-    <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <!-- <div class="container bg-danger">   -->
       <div class="container">
-        <h1 class="display-3">Fluid all the way across!</h1>
+        <a class="navbar-brand text-white" href="#">Logo</a>
+      </div>      
+      <div class="container">
+        <div class="containter col-3"></div>
+        <div class="containter col-9">
+        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-white " href="#">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-secondary " href="#">Contact</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-secondary " href="#">About Us</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-secondary " href="#">Messages <span class="badge bg-success text-white align-middle">12</span></a>
+            </li>
+          </ul>
+        </div>
+        <!-- </div> -->
       </div>
-    </div>
+    <!-- </div> -->
 
-    <!-- Images and cards: -->
-    <div class="container"><img src="https://images.unsplash.com/photo-1480554840075-72cbdabbf689?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" class="img-fluid"></div>
-    
-    <!-- Cards: A flexible and extensible container:  -->
-    <div class="container">
-    <div class="card" style="width: 18rem;">
-      <!-- the style attribute above is addressed in next video - generally we don't style inline on html  -->
-      <img class="card-img-top" src="https://images.unsplash.com/photo-1480554840075-72cbdabbf689?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-success">Go somewhere</a>
+  </nav> 
+
+
+    <h1 class="display-5">Dashboard:</h1> 
+
+    <div class="container-fluid">
+      
+      <div class="row border-top border-bottom pt-3 pb-0 font-weight-bold">
+        <div class="col-3">
+          <p>Name</p> 
+        </div>
+        <div class="col-3">
+          <p>Team</p> 
+        </div>
+        <div class="col-3">
+          <p>All Star</p> 
+        </div>
+        <div class="col-3">
+          <p>Remove</p> 
+        </div>
       </div>
+
+      <div class="row border-bottom pt-3 pb-0">
+        <div class="col-3">
+          <p>Steph</p> 
+        </div>
+        <div class="col-3">
+          <p>Warriors</p> 
+        </div>
+        <div class="col-3">
+          <p>Yes</p> 
+        </div>
+        <div class="col-3">
+          <p><span class="badge bg-danger text-white"><i class="fa fa-trash" aria-hidden="true"></i></span></p> 
+        </div>
+      </div>
+
+      <div class="row border-bottom pt-3 pb-0">
+        <div class="col-3">
+          <p>Lebron</p> 
+        </div>
+        <div class="col-3">
+          <p>Cavaliers</p> 
+        </div>
+        <div class="col-3">
+          <p>Yes</p> 
+        </div>
+        <div class="col-3">
+          <p><span class="badge bg-danger text-white"><i class="fa fa-trash" aria-hidden="true"></i></span></p> 
+        </div>
+      </div>
+
+      <div class="row border-bottom pt-3 pb-0">
+        <div class="col-3">
+          <p>Dwayne</p> 
+        </div>
+        <div class="col-3">
+          <p>Heat</p> 
+        </div>
+        <div class="col-3">
+          <p>Yes</p> 
+        </div>
+        <div class="col-3">
+          <p><span class="badge bg-danger text-white"><i class="fa fa-trash" aria-hidden="true"></i></span></p> 
+        </div>
+      </div>
+
+      <div class="row border-bottom pt-3 pb-0">
+        <div class="col-3">
+          <p>Kobe</p> 
+        </div>
+        <div class="col-3">
+          <p>Lakers</p> 
+        </div>
+        <div class="col-3">
+          <p>Yes <span class="badge bg-warning text-white align-middle">Last</span></p> 
+        </div>
+        <div class="col-3">
+          <p><span class="badge bg-danger text-white"><i class="fa fa-trash" aria-hidden="true"></i></span></p> 
+        </div>
+      </div>
+
+      <div class="row border-bottom pt-3 pb-0">
+        <div class="col-3">
+          <p>Isaiah</p> 
+        </div>
+        <div class="col-3">
+          <p>Celtics</p> 
+        </div>
+        <div class="col-3">
+          <p>Yes <span class="badge bg-success text-white align-middle">First</span></p> 
+        </div>
+        <div class="col-3">
+          <p><span class="badge bg-danger text-white"><i class="fa fa-trash" aria-hidden="true"></i></span></p> 
+        </div>
+      </div>
+
+    </div>
+     
+
+      <h2 class="display-5">Todos:</h2>  
+      <div class="alert alert-danger m-0">Watch out!</div>
+      <div class="alert alert-success m-0">Feel good about Bootstrap</div>
+      <div class="alert alert-primary m-0">Feel informed about Bootstrap</div>
+      <div class="alert alert-warning m-0">Feel warned about Bootstrap</div>
+      <div class="alert alert-warning m-0">Maybe I shoudl read the docs...</div>
+      <div class="alert alert-danger m-0">Danger zone</div>
+      <div class="alert alert-danger m-0">I really should read the docs...</div>
     </div>
   </div>
+  
+  
+   
 
  
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="bootstrap.js"></script>    
+    <script src="bs-ex-02.js"></script>    
     <!-- These 3 files *do* need to be in this order.  -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Font Awesome embed code  -->
+    <script src="https://use.fontawesome.com/aaa385b7ab.js"></script>
 </body>
-</html>
-
-<!-- All this markup was from the setup video:  -->
- <!-- <h1>Hello world!</h1>
-  <h1 class = "display-1">Hello world!</h1>
-  <h1 class = "display-2">Hello world!</h1>
-  <h1 class = "display-3">Hello world!</h1>
-
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, alias hic 
-    soluta molestiae consectetur, explicabo nihil tempora odit sint veniam quidem sed 
-    impedit corporis animi, fuga veritatis! Quae, rem unde.</p>
-
-    <blockquote class="blockquote text-center">
-      <p>I LIKE CHICKENS</p>
-      <footer class="blockquote-footer"> Yo dude</footer>
-    </blockquote>
-    <blockquote class="blockquote text-right">
-      <p>CHICKENS NAAAH</p>
-      <footer class="blockquote-footer"> Other dude</footer>
-    </blockquote>
-
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Dropdown button
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
-    </div>
-    -->
+</html> 
