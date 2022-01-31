@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="signifyingm.ico" type="image/x-icon" alt="motivique icon">
+    <title>Document</title>
+    <link rel="stylesheet" href="grid.css" />
+
+    <!-- There are 3 JavaScript files and one CSS files needed for including Bootstrap: -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+   <!-- Grid:  -->
+  <!-- The grid system isn't anything you see, it just gives and organizing component.  -->
+  <!-- Anytime you use grid you should be inside a container, or a fluid container.
+  Each row has 12 units of space. Elements wrap to new row if they go over 12. -->
+
+  
+    <div class="container">
+      <div class="row">
+        <div class="col-4 bg-success">A</div>
+        <div class="col-4 bg-primary">B</div>
+        <div class="col-4 bg-success">C</div>
+        <div class="col-4 bg-primary">D</div>
+        <div class="col-4 bg-success">E</div>
+        <div class="col-4 bg-primary">F</div>
+        <div class="col-2 bg-success">G</div>
+        <div class="col-4 bg-primary">H</div>
+        <div class="col-2 bg-success">I</div>
+        <div class="col-4 bg-primary">J</div>
+        <div class="col-1 bg-success text-center">K</div>
+        <div class="col-10 bg-primary text-center">L</div>
+        <div class="col-1 bg-success text-center">M</div>
+      </div>
+    </div>
+  
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12"> </div>
+        <div class="col-4 bg-success">A</div>
+        <div class="col-4 bg-primary">B</div>
+        <div class="col-4 bg-success">C</div>
+        <div class="col-4 bg-primary">D</div>
+        <div class="col-4 bg-success">E</div>
+        <div class="col-4 bg-primary">F</div>
+        <div class="col-2 bg-success">G</div>
+        <div class="col-4 bg-primary">H</div>
+        <div class="col-2 bg-success">I</div>
+        <div class="col-4 bg-primary">J</div>
+        <div class="col-1 bg-success text-center">K</div>
+        <div class="col-10 bg-primary text-center">L</div>
+        <div class="col-1 bg-success text-center">M</div>
+      </div>
+    </div>
+    <!-- Auto-columns.  -->
+    <!-- class="col" without a number evenly divides space -->
+    <div class="container">
+      <div class="row">
+        <div class="col bg-success text-center">A</div>
+        <div class="col bg-primary text-center">B</div>
+        <div class="col bg-success text-center">C</div>
+        <div class="col bg-primary text-center">D</div>
+      </div>
+      <div class="row">
+        <div class="col bg-success text-center">E</div>
+        <div class="col bg-primary text-center">F</div>
+        <div class="col bg-success text-center">G</div>
+        <div class="col bg-primary text-center">H</div>
+        <div class="col bg-success text-center">I</div>
+        <div class="col bg-primary text-center">J</div>
+        <div class="col bg-success text-center">K</div>
+        <div class="col bg-primary text-center">L</div>
+        <div class="col bg-success text-center">M</div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col bg-success text-center"> </div>
+      </div>
+      <div class="row">
+        <div class="col bg-success text-center">A</div>
+        <div class="col bg-primary text-center">B</div>
+        <div class="col bg-success text-center">C</div>
+        <div class="col bg-primary text-center">D</div>
+      </div>
+      <div class="row">
+        <div class="col bg-success text-center">E</div>
+        <div class="col bg-primary text-center">F</div>
+        <div class="col bg-success text-center">G</div>
+        <div class="col bg-primary text-center">H</div>
+        <div class="col bg-success text-center">I</div>
+        <div class="col bg-primary text-center">J</div>
+        <div class="col bg-success text-center">K</div>
+        <div class="col bg-primary text-center">L</div>
+        <div class="col bg-success text-center">M</div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col bg-success text-center"> </div>
+      </div>
+      <div class="row">
+        <div class="col bg-success text-center">A</div>
+        <div class="col-7 bg-primary text-center">B</div>
+        <div class="col bg-success text-center">C</div> 
+        <!-- In this case, the two divs with class "col" are given equal share 
+        of the 5 grid spaces not taken by the col-7: ie, they are 2.5 grid 
+        spaces each. You generally can't use decimals as col size. -->
+      </div>
+      <div class="row">
+        <div class="col bg-success text-center">A</div>
+        <div class="col col-xl-10 bg-primary text-center">B</div>
+        <!-- Having the second col-xl class means that once the screensize reaches 
+        "xl", this element becomes 10 grid spaces wide, otherwise, it is 
+        equal with the others. -->
+        <div class="col bg-success text-center">C</div> 
+      </div>
+     </div>
+
+    <!-- You can subdivide the units. Nested Grids. -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <div class="alert alert-danger">
+            <div class="row">
+              <div class="col-6 bg-success">
+                This is an alert!
+              </div>
+              <div class="col">
+                <button class="btn btn-info btn-block">OK</button>
+              </div>
+              <div class="col">
+                <button class="btn btn-secondary btn-block">OMG</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="alert alert-danger">
+            Oh No!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid flex utilities -->
+    <div class="container-fluid">
+      <div class="row border align-items-center justify-content-center justify-content-around">
+
+        <div class="col-3 align-self-start">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus beatae eveniet dicta doloribus omnis quasi! Fugiat itaque animi architecto, neque earum nihil voluptates suscipit, at repellendus illo aliquam, consequatur fugit?</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-3 align-self-end">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Border and color utilities - bootstrap has a lot of utility classes -->
+    <div class="container border border-left-0">
+      <h1 class="display-1 border-left border-right">Utilities</h1>
+      <h3 class="bg-warning text-white">Hello</h3>
+      <h3 class="bg-info border rounded">Hello</h3>
+      <h3 class="text-danger border-top border-bottom">Hello</h3>
+      <h3 class="bg-dark text-success">Hello</h3>
+      <img class="border rounded-circle" src="https://images.pexels.com/photos/326012/pexels-photo-326012.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+    </div>
+
+    <!-- shadow utility classes  -->
+    <!-- shadow - none, sm, p-3, lg -->
+
+    <!-- spacing utilities  -->
+    <!-- m : margin
+    p : padding
+    0 through 5
+    t top 
+    b bottom 
+    l left 
+    r right 
+    x left and right 
+    y top and bottom -->
+ 
+      <!-- display utility  -->
+      <!-- none 
+      inline
+      inline-block 
+      block 
+      table 
+      table-cell 
+      table-row 
+      flex 
+      inline-flex -->
+
+      <!-- Show and hide elements based on screen size -->
+
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h3>WELCOME!!!</h3>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptate exercitationem, culpa praesentium vitae eaque fugiat saepe tempora laboriosam, quas, similique aperiam ad assumenda. Rem deleniti quasi perspiciatis sequi inventore?</p>
+          </div>
+          <div class="col-md-6 d-none d-md-inline">
+            <img src="https://images.pexels.com/photos/326012/pexels-photo-326012.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" alt="bunny" class="img-fluid">
+          </div>
+        </div>      
+      </div>
+
+      <!-- responsive utilities: 0 sm md lg xl  -->
+
+      <!-- Forms -->
+
+      <div class="container">
+        <h1 class="display-1">Forms!</h1>
+          <input type="text" class="form-control" placeholder="email">
+      </div>
+      
+      <!-- navbars  -->
+      <!-- Commonly used like grid because responsive navbars are a pain to create  -->
+      <!-- Requires the most markeup of any bootstrap component, but that's not surprising, it's a list of buttons.  -->
+
+      <!-- Font Awesome - a separate library  -->
+      <!-- It is just a css file: 
+      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+
+      <!-- Components that require JavaScript:
+      Tooltips - they are opt-in, meaning they must be initialized
+      Same with popovers.
+      Carousels - enabled
+      Dropdowns 
+      Collapse - anything can be collapsible -->
+
+      <!-- Customiving Bootstrap - download source files and write sass 
+      You can also use a website that themes it for you like a template 
+      BootStrap Build 
+      BootStrap Magic -->
+
+      Other CSS Frameworks: 
+      
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="grid.js"></script>    
+    <!-- These 3 files *do* need to be in this order.  -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html> 
